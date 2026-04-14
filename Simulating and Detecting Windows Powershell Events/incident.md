@@ -46,11 +46,18 @@ Highlighted abnormal or repeated activity
 ## 5. Evidence
 ### PowerShell Script Block Logs (Event ID 4104)
 | Field |	Value |	Meaning |
+|-------|--------|--------|
 | Event ID |	4104 | Script execution |
 | Command	| whoami |	User discovery |
 | Command	| ipconfig |	Network enumeration |
 | Command	| Get-Process |	Process discovery |
 
+### Process Creation Logs (Event ID 4688)
+| Field	| Value |	Meaning |
+|-------|-------|---------|
+| Event ID |	4688 |	Process created |
+| Process Name |	powershell.exe |	PowerShell execution |
+| Command Line	| powershell -enc ...	 | Encoded command |
 ## Key Indicators
 Execution of multiple system discovery commands
 Presence of encoded/obfuscated PowerShell commands
